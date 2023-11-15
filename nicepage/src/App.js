@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import NicePage from "./components/NicePage";
 
 function App() {
   return (
     <>
-      <h1>Business and Industrial Parks</h1>
+      <NicePage />
     </>
   );
 }
