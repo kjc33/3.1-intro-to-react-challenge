@@ -26,7 +26,7 @@ h1 {
 }
 
 .hero-headshot {
-  background-image: url(./assets/HeroHeadshot.jpeg);
+  background-image: url(./assets/hero-headshot.jpeg);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -35,10 +35,14 @@ h1 {
   margin-bottom: 20px;
 }
 
+.hero-headshot,
+.hero-value-proposition {
+  z-index: 99;
+}
+
 .hero-cards .inner-container {
-  position: relative;
-  top: -50px;
-  padding: 0 30px 0 30px;
+  margin-top: -50px;
+  padding: 0 30px 50px 30px;
 }
 
 .hero-value-proposition {
@@ -47,7 +51,8 @@ h1 {
   text-align: center;
 }
 
-.hero-value-proposition p {
+.hero-value-proposition p,
+.about .inner-container .image-right-content-left .content .subhead {
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -68,10 +73,52 @@ h1 {
   border: solid 2px #454545;
 }
 
+/* About - Image Right, Content Left  */
+
+.about-heading {
+  font-family: Titillium Web, sans-serif;
+  font-size: 3rem;
+}
+
+.image-right-content-left .content {
+  text-align: center;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.about .inner-container .image-right-content-left .content p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #111111;
+}
+
+.about .inner-container .image-right-content-left .content .subhead {
+  margin-bottom: 0;
+}
+
+.about .inner-container .image-right-content-left .image {
+  background-image: url(./assets/city-scape.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+}
+
 /* Layout */
 
 .inner-container {
   padding: 50px 30px;
+}
+
+.about .inner-container {
+  padding: 0 30px 50px 30px;
 }
 
 .flex {
@@ -127,12 +174,15 @@ h1 {
   .hero-headshot {
     height: 400px;
   }
+  .about .inner-container .image-right-content-left .image {
+    height: 450px;
+  }
 }
 
 @media screen and (max-width: 641px) {
   .hero-cards .inner-container {
     max-width: 90%;
-    margin: 0 auto;
+    margin: -50px auto 0 auto;
   }
 }
 
@@ -146,9 +196,9 @@ h1 {
   /* Hero Cards */
   .hero-cards .inner-container {
     width: 100%;
-    top: -269px;
+    margin-top: -200px;
     gap: 20px;
-    min-height: 289px;
+    min-height: 320px;
   }
   .hero-headshot {
     height: auto;
@@ -164,19 +214,43 @@ h1 {
     justify-content: center;
     align-items: center;
   }
+  /* About - Image */
+  .about .inner-container .image-right-content-left .image {
+    flex: 0 0 38.333333333%;
+    width: 38.333333333%;
+  }
+  .about .inner-container .image-right-content-left .content {
+    flex: 0 0 61.66666667%;
+    width: 61.66666667%;
+    padding-right: 30px;
+  }
+  .about .inner-container {
+    padding: 0 30px 50px 30px;
+  }
+  .content {
+    padding-bottom: 0;
+  }
+  .about-heading {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width:768px) {
   .inner-container {
     padding: 80px 50px;
   }
+  .about .inner-container {
+    padding: 0 50px 80px 50px;
+  }
   h1 {
     font-size: 4rem;
   }
   .hero-cards .inner-container {
     max-width: 768px;
+    min-height: 360px;
     margin: 0 auto;
-    top: -200px;
+    margin-top: -175px;
+    padding: 0 50px 80px 50px;
   }
 }
 
@@ -185,6 +259,14 @@ h1 {
     font-size: 4.5rem;
   }
   .hero-cards .inner-container {
-    min-height: 350px;
+    min-height: 400px;
+  }
+  /* About - Content */
+  .about .inner-container .image-right-content-left .content .about-heading,
+  .about .inner-container .image-right-content-left .content .subhead {
+    max-width: 416px;
+  }
+  .about-heading {
+    font-size: 3rem;
   }
 }
