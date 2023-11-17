@@ -127,20 +127,20 @@ h1 {
 }
 
 .secondary-heading {
-  font-family: Titillium Web, sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 2rem;
 }
 
 .tertiary-heading {
   font-size: 1.875rem;
-  font-family: Titillium Web, sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 700;
 }
 
 /* About - Image Right, Content Left  */
 
 .primary-heading {
-  font-family: Titillium Web, sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 3rem;
 }
 
@@ -182,7 +182,8 @@ body .light-font {
 
 /* Certifications */
 
-.certifications {
+.certifications,
+.footer {
   background-color: #000000;
 }
 
@@ -225,7 +226,8 @@ body .light-font {
   padding: 50px 30px;
 }
 
-.advantages .inner-container .left-col p {
+.advantages .inner-container .left-col p,
+.team .inner-container .image-left-content-right .content p {
   padding-bottom: 10px;
 }
 
@@ -257,6 +259,135 @@ body .light-font {
   padding-bottom: 20px;
 }
 
+.portfolio-gallery .portfolio-gallery-items {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 343px;
+}
+
+.portfolio-gallery .portfolio-gallery-item-1 {
+  background-image: url(./assets/skyscraper-1.png);
+}
+
+.portfolio-gallery .portfolio-gallery-item-2 {
+  background-image: url(./assets/skyscraper-2.png);
+}
+
+.portfolio-gallery .portfolio-gallery-item-3 {
+  background-image: url(./assets/skyscraper-3.png);
+}
+
+.portfolio-gallery .portfolio-gallery-item-4 {
+  background-image: url(./assets/skyscraper-4.png);
+}
+
+.portfolio-gallery .portfolio-gallery-item-5 {
+  background-image: url(./assets/skyscraper-5.png);
+}
+
+.portfolio-gallery .portfolio-gallery-item-6 {
+  background-image: url(./assets/skyscraper-6.png);
+}
+
+.portfolio-gallery .portfolio-gallery-item-7 {
+  background-image: url(./assets/skyscraper-7.png);
+}
+
+.portfolio-gallery .portfolio-gallery-item-8 {
+  background-image: url(./assets/skyscraper-8.png);
+}
+
+/* Team */
+
+.team {
+  background-color: #ffffff;
+}
+
+.team .inner-container .image-left-content-right .image {
+  margin: 0 auto;
+}
+
+.team .inner-container .image-left-content-right .image img {
+  height: 294px;
+  margin-bottom: 30px;
+}
+
+.team .inner-container .image-left-content-right .content {
+  text-align: center;
+  gap: 20px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Footer */
+
+.footer .inner-container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.top-left-half-footer,
+.top-right-half-footer {
+  gap: 30px;
+}
+
+.top-right-half-footer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+.footer .footer-signature {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 50px 30px;
+  background-color: #333333;
+}
+
+.footer .footer-signature a {
+  color: #adcce9;
+  text-decoration: underline;
+}
+
+.footer .footer-signature a:hover {
+  color: #a1a1a1;
+  text-decoration: none;
+}
+
+.footer-text {
+  font-family: Roboto, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.address {
+  font-family: Roboto, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.top-right-half-footer table {
+  width: 100%;
+  max-width: 200px;
+}
+
+.top-right-half-footer table tbody tr td:nth-child(odd) {
+  text-align: left;
+}
+
+.top-right-half-footer table tbody tr td:nth-child(even) {
+  text-align: right;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 350px) {
@@ -286,6 +417,22 @@ body .light-font {
   /* Advantages */
   .advantages .inner-container .middle-col {
     min-height: 550px;
+  }
+  /* Footer */
+  .footer .inner-container {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .team .inner-container .image-left-content-right .image {
+    margin-bottom: 50px;
+  }
+  /* Team */
+  .team .inner-container .image-left-content-right .image img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -391,6 +538,10 @@ body .light-font {
   .advantages .inner-container .middle-col {
     min-height: 390px;
   }
+  /* Portfolio */
+  .portfolio-gallery .portfolio-gallery-items {
+    height: 545px;
+  }
 }
 
 @media screen and (min-width: 642px) and (max-width: 767px) {
@@ -437,6 +588,49 @@ body .light-font {
   .advantages .inner-container .right-col .inner-right-col-wrapper {
     padding: 80px 0 0 0;
   }
+  /* Portfolio */
+  .portfolio .portfolio-gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .portfolio .portfolio-gallery .portfolio-gallery-items {
+    flex: 50%;
+    width: 50%;
+    height: 363px;
+  }
+  /* Team */
+  .team .inner-container .image-left-content-right {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .team .inner-container .image-left-content-right .image {
+    flex: 50%;
+    justify-content: center;
+    width: 50%;
+    height: 340px;
+    margin-bottom: 0;
+  }
+  .team .inner-container .image-left-content-right .content {
+    flex: 50%;
+    width: 50%;
+  }
+  /* Footer */
+  .footer .inner-container {
+    max-width: 1140px;
+    gap: 50px;
+  }
+  .footer .inner-container .top-half-footer {
+    flex-direction: row;
+  }
+  .top-left-half-footer,
+  .top-right-half-footer {
+    flex: 50%;
+    width: 50%;
+    max-width: 100%;
+  }
+  .footer .footer-signature {
+    padding: 50px;
+  }
 }
 
 @media screen and (min-width: 880px) {
@@ -481,6 +675,12 @@ body .light-font {
     height: 100%;
     justify-content: space-around;
   }
+  /* Portfolio */
+  .portfolio .portfolio-gallery .portfolio-gallery-items {
+    flex: 25%;
+    width: 25%;
+    height: 237px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -491,5 +691,9 @@ body .light-font {
   /* Advantages */
   .advantages .inner-container .middle-col {
     min-height: 507px;
+  }
+  /* Portfolio */
+  .portfolio .portfolio-gallery .portfolio-gallery-items {
+    height: 287px;
   }
 }

@@ -9,6 +9,7 @@ import Hero from "../assets/business-building.jpeg";
 import HomeownerIcon from "../assets/homeowner-icon.svg";
 import React from "react";
 import RestaurantIcon from "../assets/restaurant-icon.svg";
+import WorldMap from "../assets/map.png";
 
 function NicePage() {
   return (
@@ -150,7 +151,84 @@ function NicePage() {
             <h3 className="tertiary-heading light-font">Recent Projects</h3>
           </div>
         </div>
+        <div className="portfolio-gallery flex flex-column">
+          <div className="portfolio-gallery-items portfolio-gallery-item-1"></div>
+          <div className="portfolio-gallery-items portfolio-gallery-item-2"></div>
+          <div className="portfolio-gallery-items portfolio-gallery-item-3"></div>
+          <div className="portfolio-gallery-items portfolio-gallery-item-4"></div>
+          <div className="portfolio-gallery-items portfolio-gallery-item-5"></div>
+          <div className="portfolio-gallery-items portfolio-gallery-item-6"></div>
+          <div className="portfolio-gallery-items portfolio-gallery-item-7"></div>
+          <div className="portfolio-gallery-items portfolio-gallery-item-8"></div>
+        </div>
       </section>
+      <section className="team">
+        <div className="inner-container max-width flex flex-column">
+          <div className="image-left-content-right flex flex-column">
+            <div className="image flex flex-column">
+              <figure>
+                <img src={WorldMap} alt="World Map" />
+              </figure>
+            </div>
+            <div className="content flex flex-column">
+              <h2 className="small-heading">Elvo Construction</h2>
+              <h3 className="tertiary-heading">The Best World Team</h3>
+              <p className="body-font">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus eleifend. Nullam ornare sapien quis vulputate cursus. Vivamus vel pellentesque purus, sed dignissim elit. Maecenas ac augue metus. Suspendisse in elit nibh. Vestibulum in nibh risus. Phasellus ut cursus
+                sem.
+              </p>
+              <a className="btn cta-btn" href="https://www.google.com" target="_blank" rel="noreferrer">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className="footer">
+        <div className="inner-container flex flex-column max-width">
+          <div className="top-half-footer flex flex-column large-gap light-font">
+            <div className="top-left-half-footer flex flex-column">
+              <p className="footer-text">Contact us today to plan your boat’s maintenance or repair procedure.</p>
+              <p className="address">
+                4262 Richison Drive,
+                <br />
+                Missoula, MT 59801
+              </p>
+            </div>
+            <div className="top-right-half-footer flex flex-column flex-align-center">
+              <h3 className="tertiary-heading">Contact Us</h3>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Freephone:</td>
+                    <td>+1 800 559 6580</td>
+                  </tr>
+                  <tr>
+                    <td>Telephone:</td>
+                    <td>+1 800 603 6035</td>
+                  </tr>
+                  <tr>
+                    <td>Fax:</td>
+                    <td>+1 800 889 9898</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div className="footer-signature light-font">
+          <p className="site-signature">
+            <a href="https://nicepage.com/website-templates" target="_blank" rel="noreferrer">
+              Website Templates
+            </a>{" "}
+            created with{" "}
+            <a href="https://nicepage.com" target="_blank" rel="noreferrer">
+              Website Builder Software
+            </a>
+            .
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
