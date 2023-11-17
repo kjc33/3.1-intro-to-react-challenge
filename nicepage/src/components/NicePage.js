@@ -1,14 +1,27 @@
+import About from "./About";
+import AdvantagesDesc from "./AdvantagesDesc";
+import AdvantagesIcons from "./AdvantagesIcons";
+import CertsDesc from "./CertsDesc";
+import CertsIcons from "./CertsIcons";
+import CtaBtn from "./CtaBtn";
 import CommercialContractorIcon from "../assets/commercial-contractor-icon.svg";
 import ConstructionWorkerIcon from "../assets/construction-worker.svg";
 import EducatorIcon from "../assets/educator-icon.svg";
 import FactoryIcon from "../assets/factory-icon.svg";
+import FooterAddress from "./FooterAddress";
+import FooterContact from "./FooterContact";
 import GearWheelIcon from "../assets/gear-wheel-icon.svg";
 import GovernmentContractorIcon from "../assets/government-contractor-icon.svg";
 import HardHatWorkerIcon from "../assets/hardhat-worker-icon.svg";
-import Hero from "../assets/business-building.jpeg";
+import Hero from "./Hero";
+import HeroImage from "../assets/business-building.jpeg";
 import HomeownerIcon from "../assets/homeowner-icon.svg";
+import Portfolio from "./Portfolio";
 import React from "react";
 import RestaurantIcon from "../assets/restaurant-icon.svg";
+import SiteTitle from "./SiteTitle";
+import Team from "./Team";
+import ValueProp from "./ValueProp";
 import WorldMap from "../assets/map.png";
 
 function NicePage() {
@@ -17,16 +30,14 @@ function NicePage() {
       <section className="page-name">
         <div className="inner-container max-width flex flex-column flex-justify-center flex-align-center">
           <div className="main-heading">
-            <h1>Business and Industrial Parks</h1>
+            <SiteTitle title="Business and Industrial Parks"></SiteTitle>
           </div>
         </div>
       </section>
       <section className="hero">
         <div className="inner-container max-width no-padding">
           <div className="hero-bg">
-            <figure>
-              <img src={Hero} alt="Business Building" />
-            </figure>
+            <Hero imgSrc={HeroImage} imgAlt="Business Building" />
           </div>
         </div>
       </section>
@@ -34,10 +45,8 @@ function NicePage() {
         <div className="inner-container flex flex-column flex-mobile-row-641">
           <div className="hero-headshot"></div>
           <div className="hero-value-proposition">
-            <p>We have several business and industrial parks with available space for your business</p>
-            <a className="btn cta-btn" href="https://www.google.com" target="_blank" rel="noreferrer">
-              Read More
-            </a>
+            <ValueProp valueProposition="We have several business and industrial parks with available space for your business"></ValueProp>
+            <CtaBtn btnClasses="btn cta-btn" url="https://www.google.com" btnText="Read More" />
           </div>
         </div>
       </section>
@@ -45,12 +54,12 @@ function NicePage() {
         <div className="inner-container max-width flex flex-column">
           <div className="image-right-content-left flex flex-column flex-mobile-row-641">
             <div className="content flex flex-column">
-              <h2 className="primary-heading">Construction Machinery Co.</h2>
-              <h3 className="small-heading">We have a proud tradition of service as a General Contractor since 1974</h3>
-              <p>We headquartered in San Diego, brings over 42 years of local and national construction experience; with a reputation for delivering large and unique design-build projects ahead of schedule and on budget. Our company has served clients and building owners for over four decades.</p>
-              <a className="btn cta-btn" href="https://www.google.com" target="_blank" rel="noreferrer">
-                Read More
-              </a>
+              <About
+                title="Construction Machinery Co."
+                subhead="We have a proud tradition of service as a General Contractor since 1974"
+                description="We headquartered in San Diego, brings over 42 years of local and national construction experience; with a reputation for delivering large and unique design-build projects ahead of schedule and on budget. Our company has served clients and building owners for over four decades."
+              />
+              <CtaBtn btnClasses="btn cta-btn" url="https://www.google.com" btnText="Read More" />
             </div>
             <div className="image"></div>
           </div>
@@ -59,54 +68,30 @@ function NicePage() {
       <section className="certifications">
         <div className="inner-container flex flex-column large-gap">
           <div className="certifications-description flex flex-column small-gap">
-            <h2 className="small-heading">What we do</h2>
-            <h3 className="secondary-heading">Company Certifications</h3>
-            <p className="body-font light-font">
-              Our company offers a variety of services to meet your project’s needs, to take you from collaboration meetings all the way to ribbon-cutting and beyond. We believe that every project is unique, and can customize our approach to fit your particular project.
-            </p>
+            <CertsDesc
+              certsSmallHeading="What we do"
+              certsSecondaryHeading="Company Certifications"
+              certsDescription="Our company offers a variety of services to meet your project’s needs, to take you from collaboration meetings all the way to ribbon-cutting and beyond. We believe that every project is unique, and can customize our approach to fit your particular project."
+            />
           </div>
           <div className="three-columns flex flex-column flex-mobile-row-641 small-gap">
             <div className="certification-item flex flex-column flex-align-center x-small-gap">
-              <figure>
-                <img src={HardHatWorkerIcon} alt="Hardhat Worker Icon" width="64" height="64" />
-              </figure>
-              <h4 className="tertiary-heading">Healthcare Building</h4>
-              <p className="body-font light-font">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <CertsIcons imgSrc={HardHatWorkerIcon} imgAlt="Hardhat Worker Icon" imgWidth={64} imgHeight={64} iconHeading="Healthcare Building" iconDescription="Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
             </div>
             <div className="certification-item flex flex-column flex-align-center x-small-gap">
-              <figure>
-                <img src={EducatorIcon} alt="Educator Icon" width="64" height="64" />
-              </figure>
-              <h4 className="tertiary-heading">Education Building</h4>
-              <p className="body-font light-font">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <CertsIcons imgSrc={EducatorIcon} imgAlt="Educator Icon" imgWidth={64} imgHeight={64} iconHeading="Education Building" iconDescription="Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
             </div>
             <div className="certification-item flex flex-column flex-align-center x-small-gap">
-              <figure>
-                <img src={GovernmentContractorIcon} alt="Government Contractor Icon" width="64" height="64" />
-              </figure>
-              <h4 className="tertiary-heading">Government Building</h4>
-              <p className="body-font light-font">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <CertsIcons imgSrc={GovernmentContractorIcon} imgAlt="Government Contractor Icon" imgWidth={64} imgHeight={64} iconHeading="Government Building" iconDescription="Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
             </div>
             <div className="certification-item flex flex-column flex-align-center x-small-gap">
-              <figure>
-                <img src={CommercialContractorIcon} alt="Commercial Contractor Icon" width="64" height="64" />
-              </figure>
-              <h4 className="tertiary-heading">Commercial Building</h4>
-              <p className="body-font light-font">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <CertsIcons imgSrc={CommercialContractorIcon} imgAlt="Commercial Contractor Icon" imgWidth={64} imgHeight={64} iconHeading="Commercial Building" iconDescription="Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
             </div>
             <div className="certification-item flex flex-column flex-align-center x-small-gap">
-              <figure>
-                <img src={HomeownerIcon} alt="Homeowner Icon" width="64" height="64" />
-              </figure>
-              <h4 className="tertiary-heading">Residential Building</h4>
-              <p className="body-font light-font">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <CertsIcons imgSrc={HomeownerIcon} imgAlt="Homeowner Icon" imgWidth={64} imgHeight={64} iconHeading="Residential Building" iconDescription="Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
             </div>
             <div className="certification-item flex flex-column flex-align-center x-small-gap">
-              <figure>
-                <img src={RestaurantIcon} alt="Restaurant Icon" width="64" height="64" />
-              </figure>
-              <h4 className="tertiary-heading">Restaurant Facilities</h4>
-              <p className="body-font light-font">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <CertsIcons imgSrc={RestaurantIcon} imgAlt="Restaurant Icon" imgWidth={64} imgHeight={64} iconHeading="Restaurant Facilities" iconDescription="Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
             </div>
           </div>
         </div>
@@ -115,30 +100,25 @@ function NicePage() {
         <div className="inner-container no-padding flex flex-column flex-mobile-row-641">
           <div className="left-col flex flex-column flex-align-center flex-justify-center">
             <div className="inner-left-col-wrapper flex flex-column flex-align-center flex-justify-center x-small-gap">
-              <figure>
-                <img src={ConstructionWorkerIcon} alt="Construction Worker Icon" width="64" height="64" />
-              </figure>
-              <h2 className="small-heading">Healthcare Building</h2>
-              <p className="body-font">Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling Team specializes in tile installation and works directly with each.</p>
-              <a className="btn cta-btn" href="https://www.google.com" target="_blank" rel="noreferrer">
-                Read More
-              </a>
+              <AdvantagesDesc
+                imgSrc={ConstructionWorkerIcon}
+                imgAlt="Construction Worker Icon"
+                imgWidth={64}
+                imgHeight={64}
+                smallHeading="Healthcare Building"
+                advantagesDescription="Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling Team specializes in tile installation and works directly with each."
+              />
+              <CtaBtn btnClasses="btn cta-btn" url="https://www.google.com" btnText="Read More" />
             </div>
           </div>
           <div className="middle-col"></div>
           <div className="right-col flex flex-column flex-align-center flex-justify-center">
             <div className="inner-right-col-wrapper flex flex-column flex-align-center flex-justify-center x-small-gap">
               <div className="inner-right-icon-box">
-                <figure>
-                  <img src={FactoryIcon} alt="Factory Icon" width="64" height="64" />
-                </figure>
-                <h2 className="small-heading">Education Building</h2>
+                <AdvantagesIcons imgSrc={FactoryIcon} imgAlt="Factory Icon" imgWidth={64} imgHeight={64} smallHeading="Education Building" />
               </div>
               <div className="inner-right-icon-box">
-                <figure>
-                  <img src={GearWheelIcon} alt="Gearwheel Icon with Wrench" width="64" height="64" />
-                </figure>
-                <h2 className="small-heading">Government Building</h2>
+                <AdvantagesIcons imgSrc={GearWheelIcon} imgAlt="Gearwheel Icon with Wrench" imgWidth={64} imgHeight={64} smallHeading="Government Building" />
               </div>
             </div>
           </div>
@@ -147,8 +127,7 @@ function NicePage() {
       <section className="portfolio">
         <div className="inner-container no-padding">
           <div className="portfolio-heading">
-            <h2 className="small-heading light-font">Portfolio</h2>
-            <h3 className="tertiary-heading light-font">Recent Projects</h3>
+            <Portfolio smallHeading="Portfolio" tertiaryHeading="Recent Projects" />
           </div>
         </div>
         <div className="portfolio-gallery flex flex-column">
@@ -166,20 +145,16 @@ function NicePage() {
         <div className="inner-container max-width flex flex-column">
           <div className="image-left-content-right flex flex-column">
             <div className="image flex flex-column">
-              <figure>
-                <img src={WorldMap} alt="World Map" />
-              </figure>
+              <Hero imgSrc={WorldMap} imgAlt="World Map" />
             </div>
             <div className="content flex flex-column">
-              <h2 className="small-heading">Elvo Construction</h2>
-              <h3 className="tertiary-heading">The Best World Team</h3>
-              <p className="body-font">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus eleifend. Nullam ornare sapien quis vulputate cursus. Vivamus vel pellentesque purus, sed dignissim elit. Maecenas ac augue metus. Suspendisse in elit nibh. Vestibulum in nibh risus. Phasellus ut cursus
-                sem.
-              </p>
-              <a className="btn cta-btn" href="https://www.google.com" target="_blank" rel="noreferrer">
-                Read More
-              </a>
+              <Team
+                smallHeading="Elvo Construction"
+                tertiaryHeading="The Best World Team"
+                teamDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus eleifend. Nullam ornare sapien quis vulputate cursus. Vivamus vel pellentesque purus, sed dignissim elit. Maecenas ac augue metus. Suspendisse in elit nibh. Vestibulum in nibh risus. Phasellus ut cursus
+              sem."
+              />
+              <CtaBtn btnClasses="btn cta-btn" url="https://www.google.com" btnText="Read More" />
             </div>
           </div>
         </div>
@@ -188,12 +163,10 @@ function NicePage() {
         <div className="inner-container flex flex-column max-width">
           <div className="top-half-footer flex flex-column large-gap light-font">
             <div className="top-left-half-footer flex flex-column">
-              <p className="footer-text">Contact us today to plan your boat’s maintenance or repair procedure.</p>
-              <p className="address">
-                4262 Richison Drive,
-                <br />
-                Missoula, MT 59801
-              </p>
+              <FooterAddress
+                footerText="Contact us today to plan your boat’s maintenance or repair procedure."
+                address="4262 Richison Drive Missoula, MT 59801"
+              />
             </div>
             <div className="top-right-half-footer flex flex-column flex-align-center">
               <h3 className="tertiary-heading">Contact Us</h3>
