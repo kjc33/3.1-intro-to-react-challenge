@@ -324,6 +324,11 @@ body .light-font {
 
 /* Footer */
 
+tbody {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
 .footer .inner-container {
   text-align: center;
   width: 100%;
@@ -339,7 +344,7 @@ body .light-font {
 .top-right-half-footer {
   margin: 0 auto;
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
 }
 
 .footer .footer-signature {
@@ -380,7 +385,7 @@ body .light-font {
 
 .top-right-half-footer table {
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
 }
 
 .top-right-half-footer table tbody tr td:nth-child(odd) {

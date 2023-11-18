@@ -10,6 +10,7 @@ import EducatorIcon from "../assets/educator-icon.svg";
 import FactoryIcon from "../assets/factory-icon.svg";
 import FooterAddress from "./FooterAddress";
 import FooterContact from "./FooterContact";
+import FooterSignature from "./FooterSignature";
 import GearWheelIcon from "../assets/gear-wheel-icon.svg";
 import GovernmentContractorIcon from "../assets/government-contractor-icon.svg";
 import HardHatWorkerIcon from "../assets/hardhat-worker-icon.svg";
@@ -163,43 +164,15 @@ function NicePage() {
         <div className="inner-container flex flex-column max-width">
           <div className="top-half-footer flex flex-column large-gap light-font">
             <div className="top-left-half-footer flex flex-column">
-              <FooterAddress
-                footerText="Contact us today to plan your boat’s maintenance or repair procedure."
-                address="4262 Richison Drive Missoula, MT 59801"
-              />
+              <FooterAddress footerText="Contact us today to plan your boat’s maintenance or repair procedure." address="4262 Richison Drive Missoula, MT 59801" />
             </div>
             <div className="top-right-half-footer flex flex-column flex-align-center">
-              <h3 className="tertiary-heading">Contact Us</h3>
-              <table>
-                <tbody>
-                  <tr>
-                    <td>Freephone:</td>
-                    <td>+1 800 559 6580</td>
-                  </tr>
-                  <tr>
-                    <td>Telephone:</td>
-                    <td>+1 800 603 6035</td>
-                  </tr>
-                  <tr>
-                    <td>Fax:</td>
-                    <td>+1 800 889 9898</td>
-                  </tr>
-                </tbody>
-              </table>
+              <FooterContact tertiaryHeading="Contact Us" freePhoneHeading="Freephone:" freePhoneNum="+1 800 559 6580" telephoneHeading="Telephone:" telephoneNum="+1 800 603 6035" faxHeading="Fax:" faxNum="+1 800 889 9898" />
             </div>
           </div>
         </div>
         <div className="footer-signature light-font">
-          <p className="site-signature">
-            <a href="https://nicepage.com/website-templates" target="_blank" rel="noreferrer">
-              Website Templates
-            </a>{" "}
-            created with{" "}
-            <a href="https://nicepage.com" target="_blank" rel="noreferrer">
-              Website Builder Software
-            </a>
-            .
-          </p>
+          <FooterSignature websiteTemplatesUrl="https://nicepage.com/website-templates" websiteTemplatesText="Website Templates" websiteBuilderUrl="https://nicepage.com" websiteBuilderText="Website Builder Software" />
         </div>
       </footer>
     </main>
